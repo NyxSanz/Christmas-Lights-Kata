@@ -19,7 +19,8 @@ func TestCheckIfAllLightTurnOff(t *testing.T) {
 
 	expected := false
 
-	got := checkIfAllLighTurnOff()
+	matrix := createMatrix(10, 10)
+	got := checkIfAllLighTurnOff(matrix)
 
 	assert.Equal(t, expected, got, "all light are turn off")
 
@@ -28,7 +29,8 @@ func TestCheckIfAllLightTurnOff(t *testing.T) {
 func TestCheckifAllLightTurnOffFailed(t *testing.T) {
 
 	expected := true
-	got := checkIfAllLighTurnOff()
+	matrix := createMatrix(10, 10)
+	got := checkIfAllLighTurnOff(matrix)
 
 	assert.NotEqual(t, expected, got, "all light are not turn off")
 }

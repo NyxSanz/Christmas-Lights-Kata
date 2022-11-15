@@ -22,6 +22,12 @@ func createMatrix(row, column int) [][]int {
 
 }
 
+func checkIfAllLighTurnOff(matrix [][]int) bool {
+
+	return countLight(matrix) > 0
+
+}
+
 func countLight(matrix [][]int) int {
 
 	total := 0
@@ -36,13 +42,6 @@ func countLight(matrix [][]int) int {
 	}
 
 	return total
-
-}
-
-func checkIfAllLighTurnOff() bool {
-
-	return countLight(createMatrix(10, 10)) > 0
-
 }
 
 func turnOnAllLight(matrix [][]int) [][]int {
